@@ -3,6 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
+      # since we are using Platform Corretto8 of AWS, we can use java: openjdk8 for Java 8 Platform
       java: corretto8
     commands:
       - echo install
@@ -11,11 +12,13 @@ phases:
       - echo pre_build
   build:
     commands:
+      # build .jar file
       - mvn package
-      - mv target/*.jar aws-build-project.jar
       - echo build
   post_build:
     commands:
+      # move the jar to top level
+      - mv target/*.jar aws-build-project.jar
       - echo post_build
 
 artifacts:
