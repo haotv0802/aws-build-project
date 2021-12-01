@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.awselasticebeanstalk.rest.webservices</groupId>
-    <artifactId>todo-rest-api-h2</artifactId>
+    <artifactId>aws-build-project</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <description>Demo project for Spring Boot</description>
